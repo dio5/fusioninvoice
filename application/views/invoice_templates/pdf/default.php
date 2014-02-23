@@ -35,7 +35,6 @@
 
         #company-name {
             color: #000;
-            font-size: 14px;
         }
 
         #invoice-to td {
@@ -45,7 +44,6 @@
 
         #invoice-to {
             padding: 0 0 20px;
-            font-size: 16px;
 
         }
 
@@ -129,9 +127,8 @@
     <table style="width: 100%;">
         <tr>
             <td style="padding-left: 5px;">
-                <h5><?php echo lang('bill_to'); ?>:</h5>
-
-                <p><?php echo $invoice->client_name; ?><br>
+                <p>
+                    <strong style="font-size: 14px"><?php echo $invoice->client_name; ?></strong><br>
                     <?php if ($invoice->client_address_1) {
                         echo $invoice->client_address_1 . '<br>';
                     } ?>
@@ -160,16 +157,16 @@
                 <table id="invoice-to-right-table">
                     <tbody>
                     <tr>
-                        <td><?php echo lang('invoice_date'); ?>:</td>
-                        <td><?php echo date_from_mysql($invoice->invoice_date_created, TRUE); ?></td>
+                        <td><strong><?php echo lang('invoice_date'); ?></strong>:</td>
+                        <td><strong><?php echo date_from_mysql($invoice->invoice_date_created, TRUE); ?></strong></td>
                     </tr>
                     <tr>
-                        <td><?php echo lang('due_date'); ?>:</td>
-                        <td><?php echo date_from_mysql($invoice->invoice_date_due, TRUE); ?></td>
+                        <td><strong><?php echo lang('due_date'); ?></strong>:</td>
+                        <td><strong><?php echo date_from_mysql($invoice->invoice_date_due, TRUE); ?></strong></td>
                     </tr>
                     <tr>
-                        <td><?php echo lang('amount_due'); ?>:</td>
-                        <td><?php echo format_currency($invoice->invoice_balance); ?></td>
+                        <td><strong><?php echo lang('amount_due'); ?></strong>:</td>
+                        <td><strong><?php echo format_currency($invoice->invoice_balance); ?></strong></td>
                     </tr>
                     </tbody>
                 </table>
@@ -245,13 +242,9 @@
         <h4><?php echo lang('terms'); ?></h4>
         <p><?php echo nl2br($invoice->invoice_terms); ?></p>
     <?php } ?>
-    <h4>
-        All payments must be received within 14 days of invoice by (international) bank transfer.
-    </h4>
-
     <p>
         Vrijstelling van BTW overeenkomstig artikel 39, paragraaf 1,1°, van het BTW-wetboek<br>
-        Vrijstelling BTW wegens intracommunautaire levering van diensten.
+        Vrijstelling BTW wegens intracommunautaire levering van diensten
     </p>
 
 
