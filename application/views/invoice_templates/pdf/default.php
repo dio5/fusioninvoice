@@ -150,6 +150,9 @@
                     <?php if ($invoice->client_phone) {
                         echo $invoice->client_phone;
                     } ?>
+                    <?php if ($invoice->client_custom_vat) {
+                        echo '<br>VAT: ' . $invoice->client_custom_vat;
+                    } ?>
                 </p>
             </td>
             <td style="width:40%;"></td>
