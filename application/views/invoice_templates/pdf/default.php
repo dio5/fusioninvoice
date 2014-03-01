@@ -8,7 +8,6 @@
     <style>
         * {
             margin: 0px;
-            padding: 5px;
         }
 
         body {
@@ -20,7 +19,8 @@
         }
 
         #header {
-            padding: 0 0 30px;
+            padding-top: 60px;
+            padding-bottom: 20px;
         }
 
         #header table {
@@ -30,11 +30,16 @@
 
         #header table td, .amount-summary td {
             vertical-align: text-top;
-            padding: 5px;
+            padding: 0;
         }
 
         #company-name {
             color: #000;
+        }
+
+        #header, #invoice-items, #invoice-to{
+            padding-left: 50px;
+            padding-right: 50px;
         }
 
         #invoice-to td {
@@ -43,15 +48,15 @@
         }
 
         #invoice-to {
-            padding: 0 0 20px;
-
+            padding-bottom: 20px;
         }
 
         #invoice-to-right-table td {
-            padding-right: 5px;
-            padding-left: 5px;
             text-align: right;
             vertical-align: top;
+        }
+        .amount-summary td {
+            padding: 5px;
         }
 
         .seperator {
@@ -68,7 +73,7 @@
         }
 
         .table-striped tr {
-            border: 1px solid #eaeaea;
+            border: 1px solid #bcbcbc;
         }
 
         #invoice-items table.table-striped th,
@@ -126,7 +131,7 @@
 <div id="invoice-to">
     <table style="width: 100%;">
         <tr>
-            <td style="padding-left: 5px;">
+            <td>
                 <p>
                     <strong style="font-size: 14px"><?php echo $invoice->client_name; ?></strong><br>
                     <?php if ($invoice->client_address_1) {
@@ -202,7 +207,7 @@
     </table>
     <table>
         <tr>
-            <td style="text-align: right; border: 1px solid #eaeaea;">
+            <td style="text-align: right; border: 1px solid #bcbcbc;">
                 <table class="amount-summary">
                     <tr>
                         <td style="text-align: right;"><?php echo lang('subtotal'); ?>:</td>
@@ -250,14 +255,11 @@
         Vrijstelling BTW wegens intracommunautaire levering van diensten
     </p>
 
-
     <h5>Bank information:</h5>
 
     <p>
-        ING België / Regio Oost-Vlaanderen / Gebied Gent<br>
-        Agentschap Gent Zuid<br>
-        Graaf Van Vlaanderenplein 7, 9000 Gent Belgium<br>
-        Tel. 00 32 9 267 35 10 Fax. 00 32 9 267 35 18<br>
+        ING België / Regio Oost-Vlaanderen / Gebied Gent - Agentschap Gent Zuid<br>
+        Graaf Van Vlaanderenplein 7, 9000 Gent Belgium - Tel. 00 32 9 267 35 10 - Fax. 00 32 9 267 35 18<br>
         Email: gent.zuid@ing.be<br>
     </p>
 
