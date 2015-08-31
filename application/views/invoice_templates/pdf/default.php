@@ -250,10 +250,12 @@
         <h4><?php echo lang('terms'); ?></h4>
         <p><?php echo nl2br($invoice->invoice_terms); ?></p>
     <?php } ?>
+    <?php if ($invoice->invoice_item_tax_total == 0) { ?>
     <p>
         Vrijstelling van BTW overeenkomstig artikel 39, paragraaf 1,1°, van het BTW-wetboek<br>
         Vrijstelling BTW wegens intracommunautaire levering van diensten
     </p>
+    <?php } ?>
 
     <h5>Bank information:</h5>
 
